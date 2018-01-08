@@ -4,7 +4,7 @@ import {StyleSheet, View} from 'react-native';
 
 import NumButton from './num-btn';
 
-const numPadValues = [['1', '2', '3'], ['4', '5', '6'], ['7', '8', '9'], ['.', '0', '<']];
+const numPadValues = [['1', '2', '3'], ['4', '5', '6'], ['7', '8', '9'], ['.', '0', String.fromCharCode(8656)]];
 
 const NumPad = props => {
     return (
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     container: {
         borderTopWidth: 1,
         borderTopColor: '#789',
-        paddingTop: 10,
+        paddingVertical: 5,
         flexDirection: 'column',
         justifyContent: 'flex-end'
     },

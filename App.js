@@ -1,11 +1,20 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View, ScrollView } from 'react-native';
+
+import NumPad from './components/num-pad';
 
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Start!</Text>
+          <ScrollView>
+
+          </ScrollView>
+          <View>
+              <NumPad
+                  onNumPress={() => console.log('f')}
+              />
+          </View>
       </View>
     );
   }
@@ -13,9 +22,7 @@ export default class App extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+      flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 });

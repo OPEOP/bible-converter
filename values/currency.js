@@ -1,31 +1,35 @@
 import * as CONST from './constants';
 
-export const talent = {
-    name: CONST.TALENT,
-    value: 26.027,
-    eqName: CONST.GOLD
-};
+const currency = [
+    {
+        name: CONST.TALENT,
+        value: CONST.TALENT_WEIGHT,
+        eqName: CONST.GOLD
+    },
 
-export const mina = {
-    name: CONST.MINA,
-    value: talent.value/60,
-    eqName: CONST.GOLD
-};
+    {
+        name: CONST.MINA,
+        value: CONST.TALENT_WEIGHT / 60,
+        eqName: CONST.GOLD
+    },
 
-export const shekel = {
-    name: CONST.SHEKEL,
-    value: talent.value/3000,
-    eqName: CONST.GOLD
-};
+    {
+        name: CONST.SHEKEL,
+        value: CONST.TALENT_WEIGHT / 3000,
+        eqName: CONST.GOLD
+    },
 
-export const denarius = {
-    name: CONST.DENARIUS,
-    value: 0.004548,
-    eqName: CONST.SILVER
-};
+    {
+        name: CONST.DENARIUS,
+        value: 0.004548,
+        eqName: CONST.SILVER
+    },
 
-export const drachma = {
-    name: CONST.DRACHMA,
-    value: 0.003,
-    eqName: CONST.SILVER
-};
+    {
+        name: CONST.DRACHMA,
+        value: 0.003,
+        eqName: CONST.SILVER
+    }
+];
+
+export default currency;

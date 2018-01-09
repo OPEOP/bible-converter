@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {StyleSheet, View} from 'react-native';
+import {DELETE_CHAR} from '../constants';
 
 import NumButton from './num-btn';
 
-const numPadValues = [['1', '2', '3'], ['4', '5', '6'], ['7', '8', '9'], ['.', '0', String.fromCharCode(8656)]];
+const numPadValues = [['1', '2', '3'], ['4', '5', '6'], ['7', '8', '9'], ['.', '0', DELETE_CHAR]];
 
 const NumPad = props => {
     return (

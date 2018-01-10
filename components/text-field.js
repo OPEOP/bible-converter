@@ -19,9 +19,9 @@ Filed.propTypes = {
 
 const styles = StyleSheet.create({
     filed: {
-        paddingLeft: 20,
-        fontSize: 25,
-        height: 30
+        paddingLeft: 10,
+        fontSize: 30,
+        height: 35
     },
 });
 

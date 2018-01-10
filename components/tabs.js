@@ -1,19 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {StyleSheet, View, TouchableOpacity, Text} from 'react-native';
+import COLORS from "../colors";
 
 const Tabs = props => {
     return (
         <View style={styles.container}>
             {
-                props.tabs.map(val => (
+                props.tabs.map(item => (
                     <TouchableOpacity
-                        key={val}
+                        key={item.val}
                         style={styles.tab}
-                        onPress={() => props.onPressToTab(val)}
+                        onPress={() => props.onPressToTab(item.val)}
                     >
-                        <Text style={[styles.tabText, props.activeTab === val && styles.activeTab]}>
-                            {val}
+                        <Text style={[styles.tabText, props.activeTab === item.val && styles.activeTab]}>
+                            {item.name}
                         </Text>
                     </TouchableOpacity>
                 ))
@@ -24,7 +25,7 @@ const Tabs = props => {
 
 Tabs.propTypes = {
     onPressToTab: PropTypes.func,
-    tabs: PropTypes.arrayOf(PropTypes.string),
+    tabs: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)),
     activeTab: PropTypes.string
 };
 
@@ -40,10 +41,10 @@ const styles = StyleSheet.create({
     },
     tabText: {
         fontSize: 15,
-        color: '#323940'
+        color: COLORS.text_dark
     },
     activeTab: {
-        color: '#ff473b',
+        color: COLORS.text_red,
         fontWeight: 'bold',
         textDecorationLine: 'underline'
     }

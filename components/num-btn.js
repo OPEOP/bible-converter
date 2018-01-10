@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {StyleSheet, TouchableOpacity, Text} from 'react-native';
+import COLORS from "../colors";
 
 const NumButton = props => {
     return (
@@ -27,7 +28,7 @@ const styles = StyleSheet.create({
     },
     text: {
         fontSize: 30,
-        color: '#323940',
+        color: COLORS.text_dark,
         fontWeight: 'bold'
     }
 });

@@ -4,6 +4,7 @@ import {StyleSheet, View} from 'react-native';
 import {DELETE_CHAR} from '../constants';
 
 import NumButton from './num-btn';
+import COLORS from "../colors";
 
 const numPadValues = [['1', '2', '3'], ['4', '5', '6'], ['7', '8', '9'], ['.', '0', DELETE_CHAR]];
 
@@ -39,7 +40,7 @@ NumPad.propTypes = {
 const styles = StyleSheet.create({
     container: {
         borderTopWidth: 1,
-        borderTopColor: '#789',
+        borderTopColor: COLORS.separate_line,
         paddingVertical: 5,
         flexDirection: 'column',
         justifyContent: 'flex-end'
